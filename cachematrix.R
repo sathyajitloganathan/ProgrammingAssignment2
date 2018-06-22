@@ -4,8 +4,7 @@
 ## the computation's outputs are cached in another object which could be used if the same computation 
 ## on the previously stored object is required again.
 
-## This create, returns a matrix and also gets or sets the inverse of that matrix on request. 
-
+## This create or returns a matrix and also gets or sets the inverse of that matrix on request. 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
         set <- function(y) {
@@ -23,7 +22,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## This function checks if the inverse computations of the matrix is cached 
 ## If cached it retrieves tht value or else it computes the inverse
-
 cacheSolve <- function(x, ...) {
         i <- x$getinverse()
         if(!is.null(i)) {
