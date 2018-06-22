@@ -32,6 +32,6 @@ cacheSolve <- function(x, ...) {
         }
         data <- x$get()
         i <- solve(data)
-        x$setmean(i)
+        x$setinverse(i)
         i
 }
